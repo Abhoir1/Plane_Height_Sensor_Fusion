@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Pyka.vcxproj" />
+  <Project Path="Pyka.vcxproj" Id="23e8f6ad-7755-46df-8173-e62cb762caf1" />
 </Solution>
