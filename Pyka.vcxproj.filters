@@ -21,7 +21,10 @@
     <ClCompile Include="parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="outlier_rejection.cpp">
+    <ClCompile Include="outlierRejection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="groundTracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +32,10 @@
     <ClInclude Include="parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="outlier_rejection.h">
+    <ClInclude Include="outlierRejection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="groundTracker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

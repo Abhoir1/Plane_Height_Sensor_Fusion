@@ -1,6 +1,7 @@
 // main.cpp
 #include "parser.h"
-#include "outlier_rejection.h"
+#include "outlierRejection.h"
+#include "groundTracker.h"
 #include <iostream>
 
 int main() {
@@ -13,6 +14,8 @@ int main() {
     double DT = 0.010;
     double MAX_CHANGE_RATE = 30.0;
     int rejectedCount{ 0 };
+
+    GroundTracker groundTracker;
 
     for (const auto& datum : data) {
         //std::cout << " gps=" << datum.gps << " alt1=" << datum.alt1<< " alt2=" << datum.alt2 << "\n";
@@ -42,6 +45,19 @@ int main() {
         }
         else if (isAlt2Valid) {
             fusedAltimeter = datum.alt2;
+        }
+
+        if (isAlt1Valid && datum.alt1 < 40.0) {
+            groundTracker.update(datum.gps, datum.alt1);
+        }
+
+        if (isAlt2Valid && datum.alt2 < 40.0) {
+            groundTracker.update(datum.gps, datum.alt2);
+        }
+
+        double gpsAgl = -1.0;
+        if (groundTracker.isReady()) {
+            gpsAgl = groundTracker.toAgl(datum.gps);
         }
     }
 

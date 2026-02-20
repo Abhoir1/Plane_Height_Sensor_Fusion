@@ -1,7 +1,8 @@
+#include "outlierRejection.h"
 #include <cmath>
 
 bool isValidReading(double currValue, double prevValue, double dt, double maxRate) {
-	//Basic sanity check if the value is below ground or more than max alititude
+	//Basic sanity check if the value is below ground or more than max altitude
 
 	if (currValue <= 0.0 || currValue > 200) { //200 here could be changed based on actual data
 		return false;
@@ -12,7 +13,7 @@ bool isValidReading(double currValue, double prevValue, double dt, double maxRat
 	if (!std::isnan(prevValue)) {
 		double rateOfChange = std::abs(prevValue - currValue) / dt;
 
-		if (rateOfChange > maxRate) {
+		if (rateOfChange > maxRate) { //if this change is physically not possible reject the reading
 			return false;
 		}
 	}

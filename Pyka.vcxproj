@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="groundTracker.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="outlier_rejection.cpp" />
+    <ClCompile Include="outlierRejection.cpp" />
     <ClCompile Include="parser.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="outlier_rejection.h" />
+    <ClInclude Include="groundTracker.h" />
+    <ClInclude Include="outlierRejection.h" />
     <ClInclude Include="parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
