@@ -8,9 +8,8 @@
 #include <iomanip>
 
 int main() {
-    const std::string filePath = "C:\\Users\\aditi\\Desktop\\Leet_Code\\OOP\\C++\\Pyka\\Given_Data\\log2.csv";
-
-    const std::string outputFilePath = "C:\\Users\\aditi\\Desktop\\Leet_Code\\OOP\\C++\\Pyka\\Output\\outputfile2.csv";
+    const std::string filePath = "data/log1.csv";
+    const std::string outputFilePath = "output/output1.csv";
     std::ofstream outFile(outputFilePath);
     outFile << "timestamp,gps_altitude,altimeter_1_altitude,altimeter_2_altitude,ok1,ok2,rateAlt1,rateAlt2,prevalt1,prevalt2,estimatedHeight\n";
 
@@ -109,6 +108,8 @@ int main() {
         else {
             prevAlt2 = 0.99 * prevAlt2 + 0.01 * estimatedHeight;
         }
+
+        std::cout << "Estimated height for timestamp: " << datum.timestamp << " is :" << estimatedHeight << '\n';
     }
     outFile.close();
     std::cout << "File saved \n";

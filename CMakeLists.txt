@@ -11,3 +11,6 @@ add_executable(altitude_estimator
 )
 
 target_include_directories(altitude_estimator PRIVATE src/)
+# Copy data folder into build directory so relative paths work
+file(COPY ${CMAKE_SOURCE_DIR}/data/ DESTINATION ${CMAKE_BINARY_DIR}/data)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/output)
