@@ -4,7 +4,7 @@
 bool isValidReading(double currValue, double prevValue, double dt, double maxRate) {
 	//Basic sanity check if the value is below ground or more than max altitude
 
-	if (currValue <= 0.0 || currValue > 200) { //200 here could be changed based on actual data
+	if (currValue <= 0.0 || currValue > 200.0) { //200 here could be changed based on actual data
 		return false;
 	}
 
