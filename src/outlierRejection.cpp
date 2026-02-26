@@ -1,6 +1,11 @@
 #include "outlierRejection.h"
 #include <cmath>
 
+// Validates individual altimeter readings by checking for physically impossible values.
+// Two failure modes are caught:
+//   1. Below-ground readings (<=0): sensor dropout or hardware fault
+//   2. Excessive rate of change: reading jumped too far since the last valid sample.
+
 bool isValidReading(double currValue, double prevValue, double dt, double maxRate) {
 	//Basic sanity check if the value is below ground or more than max altitude
 
