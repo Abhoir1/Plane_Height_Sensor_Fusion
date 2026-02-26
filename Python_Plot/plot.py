@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-file_path = r"Output/outputfile2.csv"
+file_path = r"output/output1.csv"
 
 data = pd.read_csv(file_path)
 

@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(altitude_estimator
     src/main.cpp
-    src/parser.cpp
+    src/csvParser.cpp
     src/outlierRejection.cpp
     src/groundTracker.cpp
     src/heightEstimator.cpp

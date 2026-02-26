@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,25 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="groundTracker.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="heightEstimator.cpp" />
-    <ClCompile Include="main.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="outlierRejection.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="parser.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="src\groundTracker.cpp" />
+    <ClCompile Include="src\heightEstimator.cpp" />
+    <ClCompile Include="src\csvParser.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\outlierRejection.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="groundTracker.h" />
-    <ClInclude Include="heightEstimator.h" />
-    <ClInclude Include="outlierRejection.h" />
-    <ClInclude Include="parser.h" />
+    <ClInclude Include="src\groundTracker.h" />
+    <ClInclude Include="src\heightEstimator.h" />
+    <ClInclude Include="src\outlierRejection.h" />
+    <ClInclude Include="src\csvParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

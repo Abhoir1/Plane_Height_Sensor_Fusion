@@ -1,7 +1,8 @@
-// parser.h
+// csvParser.h
 #pragma once
 #include <string>
 #include <vector>
+#include <string>
 
 struct Row {
     double timestamp;

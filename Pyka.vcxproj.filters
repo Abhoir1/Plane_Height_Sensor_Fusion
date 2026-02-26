@@ -15,33 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\groundTracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="parser.cpp">
+    <ClCompile Include="src\heightEstimator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="outlierRejection.cpp">
+    <ClCompile Include="src\csvParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="groundTracker.cpp">
+    <ClCompile Include="src\outlierRejection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="heightEstimator.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="parser.h">
+    <ClInclude Include="src\groundTracker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="outlierRejection.h">
+    <ClInclude Include="src\heightEstimator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="groundTracker.h">
+    <ClInclude Include="src\outlierRejection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="heightEstimator.h">
+    <ClInclude Include="src\csvParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

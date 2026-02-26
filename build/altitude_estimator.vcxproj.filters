@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\src\csvParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\src\outlierRejection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\src\groundTracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\src\heightEstimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\aditi\Desktop\Leet_Code\OOP\C++\Pyka\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BD5532A2-2EA7-3381-B5D2-B841F9592D65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

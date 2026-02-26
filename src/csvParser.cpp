@@ -1,7 +1,8 @@
-#include "parser.h"
+#include "csvParser.h"
 #include <iostream>
 #include <sstream>
 #include <fstream>
+
 
 std::vector<Row> parseCSV(const std::string& file_path) {
 	std::vector<Row> rows;
