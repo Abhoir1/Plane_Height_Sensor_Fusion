@@ -51,6 +51,7 @@ cmake --build .
 Output CSV will be saved to `output/output1.csv`.
 
 ## Output Format
+The estimated of the planes true height above ground level is printed on the terminal for all timestamps.
 
 The output CSV contains the following columns:
 
@@ -65,7 +66,7 @@ The output CSV contains the following columns:
 ## Results
 
 ### Log 1 (Low Altitude)
-![Log 1](plots/log1.png)
+![Log 1](plots/log1_analysis.png)
 
 ### Log 2 (High Altitude)
-![Log 2](plots/log2.png)
+![Log 2](plots/log2_analysis.png)

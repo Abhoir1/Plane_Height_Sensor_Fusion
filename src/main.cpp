@@ -8,8 +8,8 @@
 #include <iomanip>
 
 int main() {
-    const std::string filePath = "data/log1.csv";
-    const std::string outputFilePath = "output/output1.csv";
+    const std::string filePath = "data/log2.csv";
+    const std::string outputFilePath = "output/output2.csv";
     std::ofstream outFile(outputFilePath);
     outFile << "timestamp,gps_altitude,altimeter_1_altitude,altimeter_2_altitude,ok1,ok2,rateAlt1,rateAlt2,prevalt1,prevalt2,estimatedHeight\n";
 
@@ -23,7 +23,7 @@ int main() {
 
     const double DT = 0.010; //Timestamp
     const double MAX_CHANGE_RATE = 30.0; //Max allowed vertical speed for outlier rejection
-    const double LOW_ALT = 30;  //Crop spraying height below this altimeters should be priorotized
+    const double LOW_ALT = 10;  //Crop spraying height below this altimeters should be priorotized
     const double HIGH_ALT = 40;  //Altimeters go crazy after this so GPS calculated AGL should be trusted here
     const double ALPHA = 0.15;
 

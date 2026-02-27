@@ -14,8 +14,8 @@ HeightEstimator::HeightEstimator(double lowAlt, double highAlt, double alphaLow,
 //   - Above HIGH_ALT: fully trust GPS AGL (smooth trajectory over rough terrain)
 //   - Between:        linearly interpolate between the two
 double HeightEstimator::computeBlend() const {
-    if (estimatedHeight <= lowAlt)  return 1.0;
-    if (estimatedHeight > highAlt)  return 0.0;
+    if (estimatedHeight <= lowAlt)  return 0.8;
+    if (estimatedHeight > highAlt)  return 0.2;
     return 1.0 - (estimatedHeight - lowAlt) / (highAlt - lowAlt);
 }
 
