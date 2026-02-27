@@ -38,6 +38,6 @@ axes[1].grid(True, alpha=0.3)
 
 
 # ── Save and show ──────────────────────────────────────────────────────────────
-plt.savefig("plots/log1_analysis.png", dpi=150, bbox_inches="tight")
+# plt.savefig("plots/log1_analysis.png", dpi=150, bbox_inches="tight")
 plt.show()
 print("Plot saved to plots/log1_analysis.png")
