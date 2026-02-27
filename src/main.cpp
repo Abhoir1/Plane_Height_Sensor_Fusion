@@ -8,11 +8,11 @@
 #include <iomanip>
 
 int main() {
-    const std::string filePath = "data/log2.csv";
-    const std::string outputFilePath = "output/output2.csv";
+    const std::string filePath = "data/log1.csv";
+    const std::string outputFilePath = "output/output1.csv";
     std::ofstream outFile(outputFilePath);
-    outFile << "timestamp,gps_altitude,altimeter_1_altitude,altimeter_2_altitude,ok1,ok2,rateAlt1,rateAlt2,prevalt1,prevalt2,estimatedHeight\n";
-
+    outFile << "timestamp,gps_altitude,altimeter_1_altitude,altimeter_2_altitude,"
+        "ok1,ok2,rateAlt1,rateAlt2,prevalt1,prevalt2,gps_agl,estimatedHeight\n";
 
     std::vector<Row> data = parseCSV(filePath);
 
@@ -23,7 +23,7 @@ int main() {
 
     const double DT = 0.010; //Timestamp
     const double MAX_CHANGE_RATE = 30.0; //Max allowed vertical speed for outlier rejection
-    const double LOW_ALT = 10;  //Crop spraying height below this altimeters should be priorotized
+    const double LOW_ALT = 20;  //Crop spraying height below this altimeters should be priorotized
     const double HIGH_ALT = 40;  //Altimeters go crazy after this so GPS calculated AGL should be trusted here
     const double ALPHA = 0.15;
 
@@ -88,7 +88,7 @@ int main() {
         double estimatedHeight = heightEstimator.update(fusedAltimeter, gpsAgl);
 
         outFile << datum.timestamp << "," << datum.gps << "," << datum.alt1 << ","
-            << datum.alt2 << "," << isAlt1Valid << "," << isAlt2Valid << "," << std::abs(datum.alt1 - prevAlt1) / DT << "," << std::abs(datum.alt2 - prevAlt2) / DT << "," << prevAlt1 << "," << prevAlt2<< "," << estimatedHeight << "\n";
+            << datum.alt2 << "," << isAlt1Valid << "," << isAlt2Valid << "," << std::abs(datum.alt1 - prevAlt1) / DT << "," << std::abs(datum.alt2 - prevAlt2) / DT << "," << prevAlt1 << "," << prevAlt2<< "," << gpsAgl << "," << estimatedHeight << "\n";
 
 
         // --- Step 5: Update previous altimeter references ---
